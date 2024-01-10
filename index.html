@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper-container-timer">
+      <div class="container-modes">
+        <button id="pomodoro" class="btn btn-mode focus">Pomodoro</button>
+        <button id="shortBreak" class="btn btn-mode">Short Break</button>
+        <button id="longBreak" class="btn btn-mode">Long Break</button>
+      </div>
+      <div class="container">
+        <div class="container-timer">
+          <span id="contador"></span>
+          <div class="container-timer-buttons">
+            <button id="btn-play" class="show">Play</button>
+            <button id="btn-pause" class="hide">Pause</button>
+            <button id="btn-reset" class="hide">Reiniciar</button>
+          </div>
+        </div>
+        <div class="container-img">
+          <img id="img-timer" src="img/gatoStop.png" />
+        </div>
+      </div>
+    </div>
+    <script src="js/timer.js"></script>
+  </body>
+</html>
