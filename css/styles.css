@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,46 +7,49 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
-}
-
-#gradientsvg{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    background-image: linear-gradient(to bottom, #644fe9, #7c69ef, #9283f4, #a89df8, #beb6fb);
 }
 
 #contador {
     font-size: 130px;
-    text-align: right;
-    color: #000;
+    font-weight: 600;
+    color: #fff;
 }
 
 .wrapper-container-timer{
     display: grid;
     place-content: center;
-    height: 100%;
+    height: 90%;
 }
 
 .container-modes{
     display: flex;
     justify-content: space-between;
+    max-width: 650px;
 }
 
 .btn-mode{
+    background-color: #fff;
+    color: #644FE9;
+    border: 2px solid #644FE9;
+    outline: none;
+    font-weight: 600;
+    box-shadow: 0 5px 12px 0px #644FE9;
     padding: 1em 2em;
     border-radius: 15px;
-    box-shadow: 0 2px 3px 0px black;
     cursor: pointer;
     font-size: 15px;
 }
 
 .focus{
-    background-color: #AA9FF1;
-    color: white;
+    background-color: #644FE9;
+    color: #fff;
+    border: 2px solid #fff;
+    outline: none;
+    font-weight: 600;
+    box-shadow: 0 0px 7px#fff;
 }
 
 .show{
@@ -62,6 +67,8 @@ body {
 .container-timer{
     display: grid;
     place-content: center;
+    width: 361px;
+    /*grid-template-rows: 196px 1fr;*/
 }
 
 .container-img{
@@ -71,13 +78,14 @@ body {
 .container-timer-buttons{
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 40px;
 }
 
 .container-timer-buttons button {
-    font-size: 1em;
+    font-size: 40px;
+    justify-content: center;
+    color: #fff;
     cursor: pointer;
-    margin-top: 20px;
-    width: 90px;
-    padding: 10px 0;
+    background: none;
+    border: none;
 }
