@@ -117,5 +117,4 @@ playButton.addEventListener("click", () =>{
     }
 })
 
-console.log("hola");
 

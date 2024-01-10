@@ -10,6 +10,11 @@ body {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     background-image: linear-gradient(to bottom, #644fe9, #7c69ef, #9283f4, #a89df8, #beb6fb);
+    overflow-x: hidden;
+    display: grid;
+    place-content: center;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
 }
 
 #contador {
@@ -21,33 +26,70 @@ body {
 .wrapper-container-timer{
     display: grid;
     place-content: center;
-    height: 90%;
 }
 
 .container-modes{
     display: flex;
     justify-content: space-between;
     max-width: 650px;
+    animation: modeMove 700ms;
 }
 
 .btn-mode{
-    background-color: #fff;
-    color: #644FE9;
-    border: 2px solid #644FE9;
-    outline: none;
+    background-color: #ffffff;
+    color: #4d31ff;
+    border: 2px solid #4d31ff;
     font-weight: 600;
-    box-shadow: 0 5px 12px 0px #644FE9;
+    box-shadow: 0 2px 10px #4d31ff;
     padding: 1em 2em;
     border-radius: 15px;
     cursor: pointer;
     font-size: 15px;
+    
+}
+
+.btn-mode:focus{
+    animation: jump 250ms ease-in-out;
+}
+
+@keyframes gifMove {
+    from{
+        transform: translateX(500px);
+    }to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes timerMove {
+    from{
+        transform: translateX(-500px);
+    }to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes jump{
+    0%{
+        transform: translateY(0px)
+    }50%{
+        transform:translateY(5px)
+    }100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes modeMove{
+    from{
+        transform: translateY(-200px);
+    }to{
+        transform: translateY(0);
+    }
 }
 
 .focus{
     background-color: #644FE9;
     color: #fff;
     border: 2px solid #fff;
-    outline: none;
     font-weight: 600;
     box-shadow: 0 0px 7px#fff;
 }
@@ -69,10 +111,12 @@ body {
     place-content: center;
     width: 361px;
     /*grid-template-rows: 196px 1fr;*/
+    animation: timerMove 700ms;
 }
 
 .container-img{
     margin-left: -50px;
+    animation: gifMove 700ms;
 }
 
 .container-timer-buttons{
@@ -88,4 +132,22 @@ body {
     cursor: pointer;
     background: none;
     border: none;
+}
+
+/*To do design*/
+.wrapper-container-to-do{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-to-do{
+    min-width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.container-input{
+    display: flex;
+    flex-direction: column;
 }
