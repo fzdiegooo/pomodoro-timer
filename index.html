@@ -40,14 +40,23 @@
     <div class="wrapper-container-to-do">
       <div class="container-to-do">
         <div class="container-input">
-          <label for="task_input"> Ingrese nueva tarea:</label>
-          <input type="text" placeholder="ej. make a test" id="task_input">
+          <input type="text" placeholder="Add task..." id="task_input" />
+          <button type="submit" id="submitButton">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </button>
         </div>
-        <div class="list-task">
+        <div class="container-list-task">
+          <ul class="list-task" id="list-task">
 
+          </ul>
+          <div class="container-save-image">
+            <img src="" alt="">
+            <p>It's time to focus</p>
+          </div>
         </div>
       </div>
     </div>
+    <script src="js/to-do.js"></script>
     <script src="js/timer.js"></script>
   </body>
 </html>
