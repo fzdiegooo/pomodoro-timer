@@ -28,7 +28,7 @@ resetButton.addEventListener(
                 minCount = 14;
                 break;
             case "short":
-                minCount = 4;
+                minCount = 0;
                 break;
             default:
                 minCount = 24;
@@ -60,8 +60,8 @@ shortBreak.addEventListener("click", () =>{
     shortBreak.classList.add("focus");
     active = "short"
     pauseTimer();
-    count= 59;
-    minCount= 4;
+    count= 20;
+    minCount= 0;
     timer.textContent = `${appendZero(minCount+1)}:00`;
 });
 
@@ -111,6 +111,8 @@ playButton.addEventListener("click", () =>{
                 }else{
                     clearInterval(set);
                     imagenTimer.src = "img/gatoStop.png";
+                    const audioElement = new Audio("img/alarm.mp3")
+                    audioElement.play();
                 }
             }
         },1000)
