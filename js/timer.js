@@ -28,7 +28,7 @@ resetButton.addEventListener(
                 minCount = 14;
                 break;
             case "short":
-                minCount = 0;
+                minCount = 4;
                 break;
             default:
                 minCount = 24;
@@ -60,8 +60,8 @@ shortBreak.addEventListener("click", () =>{
     shortBreak.classList.add("focus");
     active = "short"
     pauseTimer();
-    count= 20;
-    minCount= 0;
+    count= 59;
+    minCount= 4;
     timer.textContent = `${appendZero(minCount+1)}:00`;
 });
 
