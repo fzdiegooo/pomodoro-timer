@@ -9,24 +9,32 @@
 body {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #644fe9, #7c69ef, #9283f4, #a89df8, #beb6fb);
+    background-image: radial-gradient(circle, #5238f9, #866dff, #b09eff, #d8ceff, #ffffff);
     overflow-x: hidden;
     display: grid;
     place-content: center;
     gap: 20px;
-    grid-template-rows: 343px 50%;
-    padding: 40px;
+    margin: 0 15px;
 }
 
 #contador {
     font-size: 130px;
     font-weight: 600;
     color: #fff;
+    height: 176px;
+    display: flex;
+    align-items: center;
 }
 
 .wrapper-container-timer{
     display: grid;
     place-content: center;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur (10px);
+    border:2px solid rgba(255, 255, 255, 0.2);
+    padding: 25px;
 }
 
 .container-modes{
@@ -42,11 +50,10 @@ body {
     border: 2px solid #4d31ff;
     font-weight: 700;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);;
-    padding: 1em 2em;
-    border-radius: 15px;
+    padding: 0.7em 2em;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
-    
 }
 
 .focus:focus{
@@ -105,19 +112,22 @@ body {
 
 .container{
     display: flex;
+    justify-content: center;
+    max-width: 650px;
 }
 
 .container-timer{
     display: grid;
-    place-content: center;
+    align-items: start;
     width: 361px;
-    /*grid-template-rows: 196px 1fr;*/
+    grid-template-rows: 170px 1fr;
     animation: timerMove 700ms;
+    
 }
 
-.container-img{
+#img-timer{
+    width: 40%;
     margin-left: -50px;
-    animation: gifMove 700ms;
 }
 
 .container-timer-buttons{
@@ -135,7 +145,7 @@ body {
     border: none;
 }
 
-/*To do design*/
+/*To-do design*/
 .wrapper-container-to-do{
     display: flex;
     justify-content: center;
@@ -145,18 +155,17 @@ body {
 .container-to-do{
     width: 100%;
     padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.20);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur (2px);
-    border:1px solid rgba(255, 255, 255, 0.18);
-    display: grid;
-    grid-template-rows: 50px 1fr ;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur (10px);
+    border:2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-height: 50vh;
 }
 
 .container-input{
-    display: flex;
-    flex-direction: column;
     position: relative;
 }
 
@@ -213,6 +222,9 @@ body {
     padding: 10px;
     list-style: none;
     border-radius: 10px;
+}
+
+.list-task{
 }
 
 .buttons-task{

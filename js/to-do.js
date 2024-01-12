@@ -66,7 +66,7 @@ function showError(error){
     containerInput.appendChild(messageError);
     setTimeout(() => {
         messageError.remove();
-    },1000);
+    },2000);
     
 }
 
